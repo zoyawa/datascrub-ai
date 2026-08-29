@@ -1,0 +1,103 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\{\
+  "core_analytics_knowledge_base": \{\
+    "concepts": [\
+      \{\
+        "concept": "Data Wrangling",\
+        "key_points": [\
+          "The iterative and continuous cycle of preparing, cleaning, transforming, and integrating data for analysis and storytelling[cite: 5].",\
+          "Step 1: Cleaning the Data - addressing missing values, implausible or extreme values, incorrect data formats, and duplicate records[cite: 5].",\
+          "Step 2: Transforming the Data - converting clean datasets into the form and structure needed for analysis and visualization[cite: 5, 6].",\
+          "Step 3: Integrating the Data - combining multiple datasets vertically, horizontally, or matching on common variables[cite: 5, 6]."\
+        ]\
+      \},\
+      \{\
+        "concept": "Cleaning Missing and Anomalous Data",\
+        "key_points": [\
+          "Missing Data: Values absent but expected, caused by entry errors, equipment failure, or non-response[cite: 5].",\
+          "Missing Data Solutions: Remove observations, impute with internal data (mean/median), or impute with trusted external data[cite: 5].",\
+          "Anomalous Values: Includes implausible values (outside real-world bounds), extreme values/outliers, incorrect formats (text vs. number), and duplicate records[cite: 5]."\
+        ]\
+      \},\
+      \{\
+        "concept": "Data Transformation",\
+        "key_points": [\
+          "Quantitative Transformation: Creating categorical bins (mutually exclusive and collectively exhaustive), changing scales, and combining variables to generate new metrics like per capita values[cite: 6].",\
+          "Categorical Transformation: Encoding into numeric codes (Boolean encoding), condensing categories, and splitting single variables into multiple columns[cite: 6].",\
+          "Tidy Data Principles: Each column represents a distinct variable, each row represents a unique observation, and each cell contains a single value[cite: 6].",\
+          "Dataset Combination: Stacking (vertical combination of identical variables), augmenting (horizontal combination of identical observations), and merging (matching on common variables)[cite: 6]."\
+        ]\
+      \},\
+      \{\
+        "concept": "Data Visualization & Grammar of Graphics",\
+        "key_points": [\
+          "Picture Superiority Effect: Images are processed much faster (within 13 milliseconds) and yield higher long-term retention than text[cite: 7].",\
+          "Grammar of Graphics: A structured framework mapping data sources to axes, colors, geometries/shapes, and point sizes[cite: 7].",\
+          "One Quantitative Variable: Histograms (frequency bins and skewness), density plots (smoothed distributions), and box/violin plots (quartiles and spread)[cite: 7].",\
+          "One Categorical Variable: Column/bar charts with spaced bars and word clouds scaled by frequency[cite: 7].",\
+          "Multivariate Analysis: Side-by-side/stacked bar charts, treemaps, scatterplots (explanatory vs. response variables), bubble charts, and heatmaps[cite: 7, 8].",\
+          "Visual Misrepresentation: Avoiding truncated axes, cherry-packing data, confusing color scales, and mislabeled axes[cite: 8]."\
+        ]\
+      \},\
+      \{\
+        "concept": "Exploratory Data Analysis (EDA)",\
+        "key_points": [\
+          "Central Tendency: Mean (non-resistant, influenced by outliers), median (resistant middle value), mode, and 90% trimmed average[cite: 9, 10].",\
+          "Variability: Range, variance, and standard deviation quantifying average dispersion[cite: 9].",\
+          "Distribution Shape & Resistance: Symmetric, left-skewed, right-skewed, and bimodal shapes; resistant statistics (median, IQR) resist outliers while non-resistant ones (mean, standard deviation) do not[cite: 9, 10].",\
+          "Associations & Percentiles: Linear relationships measured via correlation coefficient ($r$ from -1 to 1); percentiles representing values below which a percentage of observations fall[cite: 10].",\
+          "Outlier Detection: Quartile method (best for skewed data using IQR) and Mean/SD method (best for symmetrical data)[cite: 10].",\
+          "Simpson's Paradox: A phenomenon where trends in aggregate data reverse or disappear when disaggregated by a confounding subgroup variable[cite: 10]."\
+        ]\
+      \}\
+    ],\
+    "operational_cleaning_and_modeling_rules": \{\
+      "cleaning_rules": \{\
+        "standard_missing_values": ["N/A", "null", "NULL", "None", "", "NaN", "missing"],\
+        "date_formats": ["%Y-%m-%d", "%m/%d/%Y", "%Y-%m-%dT%H:%M:%S%z"],\
+        "column_naming_convention": "snake_case",\
+        "string_stripping": "Strip leading and trailing whitespace from all string/object columns to prevent phantom match failures",\
+        "categorical_normalization": "Convert all categorical text columns to lowercase and strip whitespace to prevent phantom group fragmentation (e.g., merging 'Active ' and 'active')",\
+        "id_type_enforcement": "Cast all ID fields (e.g., customer_id, order_id) to strings to preserve leading zeros and prevent accidental numeric aggregation",\
+        "imputation_hierarchy": "Use median imputation for skewed continuous features, mean for symmetric continuous features, and mode for categorical features to maintain statistical integrity"\
+      \},\
+      "anomaly_thresholds": \{\
+        "iqr_multiplier": 1.5,\
+        "z_score_threshold": 3.0,\
+        "outlier_handling": "Flag outliers for review rather than dropping them automatically, balancing error reduction with real-world variance"\
+      \},\
+      "business_logic": \{\
+        "negative_financial_values": "Flag as potential refund or chargeback; do not drop automatically to protect financial integrity",\
+        "invalid_calendar_dates": "Coerce to NaT to preserve overall time-series trend integrity without introducing false historical assumptions",\
+        "duplicate_handling": "Identify exact row duplicates and primary key collisions; log duplicate counts in the audit report before dropping redundant entries"\
+      \},\
+      "predictive_modeling_framework": \{\
+        "variable_types": \{\
+          "continuous_variables": "Numerical values on a continuous scale (e.g., gross revenue, pricing, tenure)",\
+          "categorical_variables": "Discrete classes or choices (e.g., return status: yes/no, regional segments)"\
+        \},\
+        "analytical_objective": "Focus on Prediction (forecasting future events using historical patterns) rather than strict causal Explanation, ensuring outputs solve clear business forecasting needs"\
+      \},\
+      "ml_solution_evaluation_criteria": \{\
+        "problem_definition": "Ensure machine learning is applied to predictive use cases rather than rule-based problems",\
+        "error_management": "Distinguish between Reducible Error (fixable via cleaner data and better models) and Irreducible Error (natural randomness)",\
+        "success_metrics": "Directly align data transformations and cleaning outcomes with measurable business objectives (revenue protection, cost reduction, process efficiency)"\
+      \},\
+      "executive_summary_metrics": \{\
+        "required_kpis": [\
+          "Total row count and percentage of records affected by hygiene corrections",\
+          "Total financial volume pre- and post-anomaly isolation",\
+          "Missing value percentage breakdown per column"\
+        ]\
+      \}\
+    \}\
+  \}\
+\}}
