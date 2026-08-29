@@ -128,3 +128,5 @@ df["launch_date"] = pd.to_datetime(
 * **Coercion to NaT:** Converting invalid or impossible calendar dates into Pandas' explicit *"Not a Time"* placeholder rather than inventing incorrect dates.
 * **snake_case:** Standardizing column headers into lower_snake_case (`gross_revenue`) for clean programmatic access.
 * **Exploratory Data Analysis (EDA):** The initial examination of distributions, missing values, and visual relationships across variables prior to formal modeling.
+
+> *"Want to see how the agent makes decisions? Check out our complete [System Architecture Documentation](docs/architecture.md)."*
