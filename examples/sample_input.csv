@@ -1,0 +1,11 @@
+order_id,customer_id,transaction_date,product_category,region_code,gross_rev,discount_pct,is_returned
+"ORD-9001", " CUST_401 ", "2026-01-15", "Enterprise Cloud", "NA", "$125,400.50", "15%", "No"
+"ORD-9002", "CUST_402", "2026-02-30", "Consumer Hardware", "EMEA", "4,500.00", "0%", "N/A"
+"ORD-9001", " CUST_401 ", "2026-01-15", "Enterprise Cloud", "na", "$125,400.50", "15%", "No"
+"ORD-9004", "CUST_404", "2026-03-10", "consumer hardware", "APAC", "-1,250.00", "NULL", "Yes"
+"ORD-9005", "CUST_405", "invalid_date", "Enterprise Cloud", "LATAM", "340000.00", "25%", "No"
+"ORD-9006", "CUST_406", "2026-04-18", "Smart Home IoT", "EMEA", "NULL", "missing", "No"
+"ORD-9007", "CUST_407", "2026-05-22", "Enterprise Cloud", "APAC", "$89,200.00", "10%", "No"
+"ORD-9008", "CUST_408", "2026-06-01", "Smart Home IoT", "NA", "12,350.75", "5%", "Yes"
+"ORD-9009", "CUST_409", "2026-06-14", "Consumer Hardware", "EMEA", "-450.00", "NULL", "Yes"
+"ORD-9010", "CUST_410", "2026-06-30", "Enterprise Cloud", "LATAM", "$510,000.00", "20%", "No"
