@@ -66,7 +66,7 @@ pip install pandas numpy matplotlib seaborn
 
 ### Usage Instructions
 
-1. **[Click here to open DataScrub AI in ChatGPT](https://chatgpt.com/g/g-6a9349df8d6c819194778cbd21532dd9-datascrub-ai)
+1. [Click here to open DataScrub AI in ChatGPT](https://chatgpt.com/g/g-6a9349df8d6c819194778cbd21532dd9-datascrub-ai)
 2. Select **DataScrub AI** from your agent list or conversation starters.
 3. Upload your CSV export or paste a raw data snippet into the prompt interface.
 4. *(Optional)* Provide your company's branding materials (e.g., `#0F5132` for Executive Emerald or `#500000` for Aggie Maroon) to custom-style all visual outputs.
