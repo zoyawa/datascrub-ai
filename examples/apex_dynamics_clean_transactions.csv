@@ -1,0 +1,10 @@
+order_id,customer_id,transaction_date,product_category,region_code,gross_rev,discount_pct,is_returned,gross_rev_raw,negative_revenue_flag,missing_revenue_flag,discount_pct_raw,missing_discount_flag,transaction_date_raw,invalid_date_flag,missing_return_status_flag,invalid_return_status_flag,order_id_collision_flag,exact_duplicate_flag,revenue_outlier_flag,requires_review,returned_numeric,transaction_month,net_positive_revenue_flag
+ORD-9001,CUST_401,2026-01-15,enterprise cloud,na,125400.5,15,no,"$125,400.50",False,False,15%,False,2026-01-15,False,False,False,True,False,False,True,0.0,2026-01,True
+ORD-9002,CUST_402,,consumer hardware,emea,4500.0,0,,"4,500.00",False,False,0%,False,2026-02-30,True,True,False,False,False,False,True,,,True
+ORD-9004,CUST_404,2026-03-10,consumer hardware,apac,-1250.0,,yes,"-1,250.00",True,False,,True,2026-03-10,False,False,False,False,False,False,True,1.0,2026-03,False
+ORD-9005,CUST_405,,enterprise cloud,latam,340000.0,25,no,340000.00,False,False,25%,False,invalid_date,True,False,False,False,False,True,True,0.0,,True
+ORD-9006,CUST_406,2026-04-18,smart home iot,emea,,,no,,,True,,True,2026-04-18,False,False,False,False,False,False,True,0.0,2026-04,
+ORD-9007,CUST_407,2026-05-22,enterprise cloud,apac,89200.0,10,no,"$89,200.00",False,False,10%,False,2026-05-22,False,False,False,False,False,False,False,0.0,2026-05,True
+ORD-9008,CUST_408,2026-06-01,smart home iot,na,12350.75,5,yes,"12,350.75",False,False,5%,False,2026-06-01,False,False,False,False,False,False,False,1.0,2026-06,True
+ORD-9009,CUST_409,2026-06-14,consumer hardware,emea,-450.0,,yes,-450.00,True,False,,True,2026-06-14,False,False,False,False,False,False,True,1.0,2026-06,False
+ORD-9010,CUST_410,2026-06-30,enterprise cloud,latam,510000.0,20,no,"$510,000.00",False,False,20%,False,2026-06-30,False,False,False,False,False,True,True,0.0,2026-06,True
