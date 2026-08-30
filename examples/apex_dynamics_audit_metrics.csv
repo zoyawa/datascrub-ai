@@ -1,0 +1,17 @@
+metric,value
+raw_rows,10.0
+clean_rows,9.0
+rows_removed_as_redundant_duplicates,1.0
+records_affected_by_hygiene_flags,8.0
+records_affected_pct,80.0
+order_id_collision_records,2.0
+invalid_dates,2.0
+negative_revenue_records,2.0
+missing_revenue_records,1.0
+missing_discount_records,3.0
+missing_return_status_records,1.0
+revenue_outlier_records,2.0
+gross_revenue_pre_duplicate_isolation,1205151.75
+gross_revenue_post_duplicate_isolation,1079751.25
+iqr_lower_bound,-176850.75
+iqr_upper_bound,306751.25
