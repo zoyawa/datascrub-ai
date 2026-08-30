@@ -1,0 +1,11 @@
+column,missing_count,missing_pct
+discount_pct,3,33.33
+discount_pct_raw,3,33.33
+transaction_date,2,22.22
+transaction_month,2,22.22
+gross_rev,1,11.11
+gross_rev_raw,1,11.11
+is_returned,1,11.11
+negative_revenue_flag,1,11.11
+net_positive_revenue_flag,1,11.11
+returned_numeric,1,11.11
