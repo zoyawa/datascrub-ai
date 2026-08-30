@@ -6,7 +6,7 @@ DataScrub AI bridges the gap between raw data engineering and executive decision
 
 ---
 
-## 🌟 Key Features & Architectural Highlights
+## Key Features & Architectural Highlights
 
 * **Vectorized Processing Engine:** Eliminates inefficient row iteration (`for` loops, `.iterrows()`) in favor of high-performance Pandas/NumPy vectorized string, date, and numeric operations.
 * **Non-Destructive Anomaly Flagging:** Preserves records with negative financial values (e.g., chargebacks, refunds, returns), invalid dates, and missing tokens by assigning granular audit flags instead of silently dropping data.
@@ -16,7 +16,7 @@ DataScrub AI bridges the gap between raw data engineering and executive decision
 
 ---
 
-## 🏢 Business Use Cases
+## Business Use Cases
 
 * **Executive Strategy Reviews:** Rapidly sanitize quarterly revenue exports and render brand-aligned, purpose-driven chart decks without manual data prep.
 * **Financial Loss & Chargeback Auditing:** Isolate revenue anomalies, chargebacks, and refund patterns while maintaining audit traceability across all records.
@@ -24,7 +24,7 @@ DataScrub AI bridges the gap between raw data engineering and executive decision
 
 ---
 
-## 🔄 5-Step Agent Processing Framework
+## 5-Step Agent Processing Framework
 
 ```text
 [Raw Dataset Export]
@@ -48,7 +48,7 @@ DataScrub AI bridges the gap between raw data engineering and executive decision
 
 ---
 
-## 🚀 Getting Setup & Usage Instructions
+## Getting Setup & Usage Instructions
 
 ### Prerequisites
 
@@ -70,7 +70,7 @@ pip install pandas numpy matplotlib seaborn
 
 ---
 
-## 🧪 Test Example & Benchmark Query
+## Test Example & Benchmark Query
 
 ### Raw Input Data Snippet
 
@@ -142,7 +142,7 @@ def run_enterprise_cleaning_pipeline(df: pd.DataFrame) -> pd.DataFrame:
 
 ---
 
-## 📖 Glossary of Terms for Business Stakeholders
+## Glossary of Terms for Business Stakeholders
 
 * **Vectorization:** Processing entire columns simultaneously in memory rather than iterating row-by-row, ensuring maximum computation speed.
 * **Coercion to NaT:** Converting invalid or impossible calendar dates into Pandas' explicit "Not a Time" placeholder rather than inventing incorrect dates.
