@@ -1,0 +1,845 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww13600\viewh15700\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \{\
+  "knowledge_base": \{\
+    "name": "Business Visualization Design Rules",\
+    "version": "1.0",\
+    "description": "General and chart-specific design rules used by the visualization agent to create clear, accurate, business-focused visualizations."\
+  \},\
+\
+  "sources": \{\
+    "SRC_001": \{\
+      "name": "The Data Visualisation Catalogue",\
+      "type": "visualization_reference",\
+      "url": "https://datavizcatalogue.com/",\
+      "used_for": [\
+        "chart purposes",\
+        "chart selection",\
+        "chart structure",\
+        "chart-specific usage guidance",\
+        "chart limitations"\
+      ]\
+    \},\
+\
+    "SRC_002": \{\
+      "name": "Tableau Visual Best Practices",\
+      "type": "visualization_design_reference",\
+      "url": "https://help.tableau.com/",\
+      "used_for": [\
+        "visual hierarchy",\
+        "simplicity",\
+        "business communication",\
+        "readability",\
+        "dashboard design",\
+        "visual comparison"\
+      ]\
+    \},\
+\
+    "SRC_003": \{\
+      "name": "W3C Web Accessibility Initiative",\
+      "type": "accessibility_standard",\
+      "url": "https://www.w3.org/WAI/",\
+      "used_for": [\
+        "accessible visual communication",\
+        "color accessibility",\
+        "contrast",\
+        "non-color communication"\
+      ]\
+    \},\
+\
+    "SRC_004": \{\
+      "name": "Business Visualization Knowledge Base",\
+      "type": "custom_and_synthesized_guidance",\
+      "used_for": [\
+        "agent-specific visualization behavior",\
+        "business reporting conventions",\
+        "synthesized visualization guidance",\
+        "rules adapted from multiple visualization principles"\
+      ]\
+    \}\
+  \},\
+\
+  "rules": [\
+    \{\
+      "id": "DESIGN_001",\
+      "category": "simplicity",\
+      "rule": "Remove visual elements that do not contribute to interpretation, comparison, or understanding.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_002",\
+      "category": "visual_hierarchy",\
+      "rule": "Make the information most relevant to the business question visually prominent.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_003",\
+      "category": "decoration",\
+      "rule": "Avoid decorative 3D effects because they can distort perceived magnitude and add unnecessary visual complexity.",\
+      "priority": "high",\
+      "applies_to": [\
+        "bar_chart",\
+        "grouped_bar_chart",\
+        "stacked_bar_chart",\
+        "100_percent_stacked_bar_chart",\
+        "pie_chart",\
+        "donut_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_004",\
+      "category": "chart_selection",\
+      "rule": "Choose the visualization based on the analytical question and data structure rather than visual novelty.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_005",\
+      "category": "comparison",\
+      "rule": "Prefer visual encodings based on position and length when precise comparison between values is important.",\
+      "priority": "high",\
+      "applies_to": [\
+        "bar_chart",\
+        "grouped_bar_chart",\
+        "line_chart",\
+        "table"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_006",\
+      "category": "consistency",\
+      "rule": "Use consistent visual encodings, formatting, category order, and terminology throughout the visualization.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_007",\
+      "category": "business_context",\
+      "rule": "Design the visualization to answer a specific business question rather than simply displaying available data.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_008",\
+      "category": "focus",\
+      "rule": "Highlight important values, trends, exceptions, or categories and visually de-emphasize supporting information.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_009",\
+      "category": "clutter",\
+      "rule": "Avoid unnecessary borders, backgrounds, gridlines, icons, shadows, and decorative effects.",\
+      "priority": "medium",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_010",\
+      "category": "chart_density",\
+      "rule": "Do not place more categories, series, or labels in a visualization than can be interpreted comfortably.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_011",\
+      "category": "sorting",\
+      "rule": "Sort categorical values when ranking or magnitude comparison is important.",\
+      "priority": "high",\
+      "applies_to": [\
+        "bar_chart",\
+        "grouped_bar_chart",\
+        "table"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_012",\
+      "category": "sorting",\
+      "rule": "Preserve chronological order for time-based data.",\
+      "priority": "critical",\
+      "applies_to": [\
+        "line_chart",\
+        "area_chart",\
+        "stacked_bar_chart",\
+        "100_percent_stacked_bar_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_013",\
+      "category": "bar_design",\
+      "rule": "Keep bar widths consistent within the same visualization.",\
+      "priority": "high",\
+      "applies_to": [\
+        "bar_chart",\
+        "grouped_bar_chart",\
+        "stacked_bar_chart",\
+        "100_percent_stacked_bar_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_014",\
+      "category": "bar_design",\
+      "rule": "Use horizontal bars when category names are long or when many categories need to be displayed.",\
+      "priority": "medium",\
+      "applies_to": [\
+        "bar_chart",\
+        "grouped_bar_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_015",\
+      "category": "bar_design",\
+      "rule": "Use a common quantitative baseline so bar lengths can be compared accurately.",\
+      "priority": "critical",\
+      "applies_to": [\
+        "bar_chart",\
+        "grouped_bar_chart",\
+        "stacked_bar_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_016",\
+      "category": "grouped_bar_design",\
+      "rule": "Limit the number of grouped series to prevent side-by-side comparisons from becoming crowded.",\
+      "priority": "high",\
+      "applies_to": ["grouped_bar_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_017",\
+      "category": "stacked_bar_design",\
+      "rule": "Keep stack order consistent across every category.",\
+      "priority": "high",\
+      "applies_to": [\
+        "stacked_bar_chart",\
+        "100_percent_stacked_bar_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_018",\
+      "category": "stacked_bar_design",\
+      "rule": "Limit the number of stacked segments because comparisons become difficult as the number of components increases.",\
+      "priority": "high",\
+      "applies_to": [\
+        "stacked_bar_chart",\
+        "100_percent_stacked_bar_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_019",\
+      "category": "composition",\
+      "rule": "Use part-to-whole visualizations only when categories represent components of a meaningful total.",\
+      "priority": "critical",\
+      "applies_to": [\
+        "stacked_bar_chart",\
+        "100_percent_stacked_bar_chart",\
+        "pie_chart",\
+        "donut_chart",\
+        "treemap"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_020",\
+      "category": "composition",\
+      "rule": "Prefer a bar chart over a pie or donut chart when precise comparison between category values is important.",\
+      "priority": "high",\
+      "applies_to": [\
+        "pie_chart",\
+        "donut_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_021",\
+      "category": "pie_design",\
+      "rule": "Limit pie and donut charts to a small number of clearly distinguishable categories.",\
+      "priority": "high",\
+      "applies_to": [\
+        "pie_chart",\
+        "donut_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_022",\
+      "category": "pie_design",\
+      "rule": "Avoid exploded pie slices unless emphasis on one slice is analytically justified.",\
+      "priority": "medium",\
+      "applies_to": ["pie_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_023",\
+      "category": "donut_design",\
+      "rule": "Use the center of a donut chart for a meaningful total, KPI, or summary rather than decorative text.",\
+      "priority": "medium",\
+      "applies_to": ["donut_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_024",\
+      "category": "time_series",\
+      "rule": "Use consistent time intervals when comparing changes across time whenever the underlying data allows it.",\
+      "priority": "high",\
+      "applies_to": [\
+        "line_chart",\
+        "area_chart"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_025",\
+      "category": "line_design",\
+      "rule": "Limit the number of simultaneous lines when multiple series would make trend interpretation difficult.",\
+      "priority": "high",\
+      "applies_to": ["line_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_026",\
+      "category": "line_design",\
+      "rule": "Highlight the most important line and visually de-emphasize secondary series when one series is central to the business question.",\
+      "priority": "high",\
+      "applies_to": ["line_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_027",\
+      "category": "area_design",\
+      "rule": "Use area charts primarily when magnitude or accumulated volume is important, rather than for precise comparison.",\
+      "priority": "high",\
+      "applies_to": ["area_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_028",\
+      "category": "area_design",\
+      "rule": "Avoid overlapping multiple filled areas when they obscure each other.",\
+      "priority": "high",\
+      "applies_to": ["area_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_029",\
+      "category": "scatter_design",\
+      "rule": "Ensure both scatter plot axes represent meaningful quantitative variables.",\
+      "priority": "critical",\
+      "applies_to": ["scatter_plot"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_030",\
+      "category": "scatter_design",\
+      "rule": "Reduce marker size or use transparency when observations overlap heavily.",\
+      "priority": "medium",\
+      "applies_to": ["scatter_plot"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_031",\
+      "category": "scatter_design",\
+      "rule": "Add trend lines only when they are analytically justified and useful for interpretation.",\
+      "priority": "high",\
+      "applies_to": ["scatter_plot"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_032",\
+      "category": "statistical_integrity",\
+      "rule": "Do not communicate that correlation proves causation.",\
+      "priority": "critical",\
+      "applies_to": ["scatter_plot"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_033",\
+      "category": "histogram_design",\
+      "rule": "Choose bin widths that reveal the distribution without creating artificial patterns.",\
+      "priority": "high",\
+      "applies_to": ["histogram"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_034",\
+      "category": "histogram_design",\
+      "rule": "Keep histogram bins equal in width unless unequal bins are analytically necessary and clearly communicated.",\
+      "priority": "high",\
+      "applies_to": ["histogram"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_035",\
+      "category": "distribution",\
+      "rule": "Use distribution charts when the shape, spread, median, variation, or outliers are more important than a single summary value.",\
+      "priority": "high",\
+      "applies_to": [\
+        "histogram",\
+        "box_plot"\
+      ],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_036",\
+      "category": "box_plot_design",\
+      "rule": "Provide sufficient context for box plots when the intended audience may not understand quartiles, medians, and whiskers.",\
+      "priority": "medium",\
+      "applies_to": ["box_plot"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_037",\
+      "category": "heatmap_design",\
+      "rule": "Order heatmap rows and columns logically so meaningful patterns are easier to detect.",\
+      "priority": "high",\
+      "applies_to": ["heatmap"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_038",\
+      "category": "heatmap_design",\
+      "rule": "Include a clear legend that explains how color intensity maps to values.",\
+      "priority": "critical",\
+      "applies_to": ["heatmap"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_039",\
+      "category": "waterfall_design",\
+      "rule": "Arrange waterfall components in a logical sequence from starting value through intermediate changes to ending value.",\
+      "priority": "critical",\
+      "applies_to": ["waterfall_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_040",\
+      "category": "waterfall_design",\
+      "rule": "Clearly distinguish increases, decreases, intermediate totals, and final totals.",\
+      "priority": "critical",\
+      "applies_to": ["waterfall_chart"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_041",\
+      "category": "kpi_design",\
+      "rule": "Display the primary KPI prominently and provide enough comparison context to make the value meaningful.",\
+      "priority": "critical",\
+      "applies_to": ["kpi_card"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_042",\
+      "category": "kpi_design",\
+      "rule": "Include relevant units, comparison periods, targets, or benchmarks when displaying KPIs.",\
+      "priority": "high",\
+      "applies_to": ["kpi_card"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_043",\
+      "category": "kpi_design",\
+      "rule": "Avoid displaying large collections of equally prominent KPI cards because users lose visual hierarchy.",\
+      "priority": "high",\
+      "applies_to": ["kpi_card"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_044",\
+      "category": "table_design",\
+      "rule": "Use tables when exact lookup is more important than visual pattern recognition.",\
+      "priority": "high",\
+      "applies_to": ["table"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_045",\
+      "category": "table_design",\
+      "rule": "Align numeric values consistently so users can compare magnitudes efficiently.",\
+      "priority": "high",\
+      "applies_to": ["table"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_046",\
+      "category": "table_design",\
+      "rule": "Avoid unnecessary decimal precision and format numbers according to their business meaning.",\
+      "priority": "high",\
+      "applies_to": ["table"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_047",\
+      "category": "treemap_design",\
+      "rule": "Use rectangle size to encode one clearly defined quantitative measure.",\
+      "priority": "critical",\
+      "applies_to": ["treemap"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_048",\
+      "category": "treemap_design",\
+      "rule": "Limit hierarchy depth because deeply nested treemaps become difficult to interpret.",\
+      "priority": "high",\
+      "applies_to": ["treemap"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_049",\
+      "category": "treemap_design",\
+      "rule": "Do not force labels into rectangles that are too small to display them legibly.",\
+      "priority": "medium",\
+      "applies_to": ["treemap"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_050",\
+      "category": "labeling",\
+      "rule": "Use clear labels and units when they are necessary to interpret the values correctly.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_003", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_051",\
+      "category": "labeling",\
+      "rule": "Avoid labeling every data point when doing so creates clutter; prioritize values that support interpretation.",\
+      "priority": "medium",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_052",\
+      "category": "number_formatting",\
+      "rule": "Format numbers according to their business meaning, including currency symbols, percentages, units, and appropriate decimal precision.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_053",\
+      "category": "number_formatting",\
+      "rule": "Use consistent numeric formatting for values that represent the same measure.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_054",\
+      "category": "interpretability",\
+      "rule": "A viewer should be able to identify what is being measured, how it is segmented, and what comparison is being made without guessing.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_055",\
+      "category": "business_storytelling",\
+      "rule": "When a reliable insight is known, emphasize the insight rather than presenting the chart as an unexplained collection of values.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_056",\
+      "category": "business_storytelling",\
+      "rule": "Include context such as targets, prior periods, benchmarks, or reference values when they materially improve business interpretation.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_057",\
+      "category": "comparison_integrity",\
+      "rule": "Do not use different visual scales for values that are intended to be directly compared unless the difference is clearly disclosed and analytically necessary.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_058",\
+      "category": "data_integrity",\
+      "rule": "Do not manipulate visual proportions, scales, aspect ratios, or formatting in ways that exaggerate or minimize differences.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_059",\
+      "category": "data_integrity",\
+      "rule": "Do not hide missing values, excluded observations, or important data limitations when they materially affect interpretation.",\
+      "priority": "critical",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_004"],\
+        "type": "custom_rule"\
+      \}\
+    \},\
+\
+    \{\
+      "id": "DESIGN_060",\
+      "category": "chart_alternative",\
+      "rule": "If the selected chart becomes difficult to interpret because of category count, series count, or data complexity, evaluate whether a simpler chart type would communicate the business question more effectively.",\
+      "priority": "high",\
+      "applies_to": ["all_charts"],\
+      "provenance": \{\
+        "source_ids": ["SRC_001", "SRC_002", "SRC_004"],\
+        "type": "synthesized_guidance"\
+      \}\
+    \}\
+  ]\
+\}}
