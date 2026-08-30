@@ -1,0 +1,16 @@
+{
+  "pre_render_checks": [
+    "Does the chart answer the business question?",
+    "Is the chart appropriate for the variable types?",
+    "Is the comparison visually accurate?",
+    "Are axes correctly scaled?",
+    "Are units clearly displayed?",
+    "Are categories logically ordered?",
+    "Is color being used intentionally?",
+    "Is the visualization accessible?",
+    "Is anything visually misleading?",
+    "Can unnecessary elements be removed?",
+    "Is the main insight apparent?",
+    "Would another chart communicate the information more clearly?"
+  ]
+}
