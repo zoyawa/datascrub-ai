@@ -27,7 +27,7 @@ DataScrub AI bridges the gap between raw data engineering and executive decision
 
 ---
 
-## 🔄 5-Step Agent Processing Framework
+## 5-Step Agent Processing Framework
 
 ```text
 [Raw Dataset Export]
