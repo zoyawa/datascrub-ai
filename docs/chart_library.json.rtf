@@ -1,0 +1,1007 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww12820\viewh15700\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \{\
+  "knowledge_base": \{\
+    "name": "Business Visualization Chart Library",\
+    "version": "1.0",\
+    "description": "Reference library describing core business visualization types, their analytical purposes, data requirements, strengths, limitations, design considerations, common mistakes, and business applications."\
+  \},\
+\
+  "sources": \{\
+    "SRC_001": \{\
+      "name": "The Data Visualisation Catalogue",\
+      "type": "visualization_reference",\
+      "url": "https://datavizcatalogue.com/",\
+      "used_for": [\
+        "chart definitions",\
+        "chart purposes",\
+        "chart selection",\
+        "chart structure",\
+        "chart strengths",\
+        "chart limitations",\
+        "chart-specific usage guidance"\
+      ]\
+    \},\
+\
+    "SRC_002": \{\
+      "name": "Tableau Visual Best Practices",\
+      "type": "visualization_design_reference",\
+      "url": "https://help.tableau.com/",\
+      "used_for": [\
+        "chart selection",\
+        "visual comparison",\
+        "readability",\
+        "business communication",\
+        "visual hierarchy",\
+        "dashboard design"\
+      ]\
+    \},\
+\
+    "SRC_003": \{\
+      "name": "W3C Web Accessibility Initiative",\
+      "type": "accessibility_standard",\
+      "url": "https://www.w3.org/WAI/",\
+      "used_for": [\
+        "accessible visual communication",\
+        "color accessibility",\
+        "contrast",\
+        "non-color communication"\
+      ]\
+    \},\
+\
+    "SRC_004": \{\
+      "name": "Business Visualization Knowledge Base",\
+      "type": "custom_and_synthesized_guidance",\
+      "used_for": [\
+        "business examples",\
+        "agent-specific visualization behavior",\
+        "synthesized chart-selection guidance",\
+        "business reporting conventions",\
+        "custom visualization rules"\
+      ]\
+    \}\
+  \},\
+\
+  "charts": \{\
+\
+    "bar_chart": \{\
+      "family": "comparison",\
+      "definition": "Uses rectangular bars whose lengths encode quantitative values.",\
+      "primary_purpose": [\
+        "category_comparison",\
+        "ranking"\
+      ],\
+      "best_for": [\
+        "comparing values across discrete categories",\
+        "ranking categories",\
+        "showing differences in magnitude"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "easy magnitude comparison",\
+        "familiar to business audiences",\
+        "supports precise comparisons"\
+      ],\
+      "limitations": [\
+        "becomes crowded with many categories",\
+        "not ideal for continuous time trends"\
+      ],\
+      "design_rules": [\
+        "use a common baseline",\
+        "sort bars when ranking is important",\
+        "use horizontal bars for long category names",\
+        "keep bar widths consistent"\
+      ],\
+      "avoid_when": [\
+        "the primary question concerns correlation",\
+        "the main purpose is showing a continuous trend"\
+      ],\
+      "common_mistakes": [\
+        "unnecessary 3D effects",\
+        "inconsistent bar widths",\
+        "excessive colors",\
+        "truncated quantitative axes that exaggerate differences"\
+      ],\
+      "business_examples": [\
+        "revenue by product",\
+        "sales by region",\
+        "customers by segment",\
+        "operating expenses by department"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "grouped_bar_chart": \{\
+      "family": "comparison",\
+      "definition": "Uses clusters of bars to compare multiple quantitative series across the same categories.",\
+      "primary_purpose": [\
+        "category_comparison",\
+        "series_comparison"\
+      ],\
+      "best_for": [\
+        "comparing two or more groups across categories",\
+        "comparing subgroups within categories",\
+        "showing side-by-side differences"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "grouping_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "supports direct comparison between groups",\
+        "works well for a small number of series",\
+        "easy for business audiences to understand"\
+      ],\
+      "limitations": [\
+        "becomes difficult to read with many groups",\
+        "color dependence increases as the number of series grows"\
+      ],\
+      "design_rules": [\
+        "keep the number of grouped series limited",\
+        "use consistent group ordering",\
+        "use the same quantitative scale for all bars",\
+        "include a clear legend or direct labels"\
+      ],\
+      "avoid_when": [\
+        "there are many categories and many groups",\
+        "the primary purpose is showing composition",\
+        "the main purpose is showing a continuous trend"\
+      ],\
+      "common_mistakes": [\
+        "too many colors",\
+        "too many grouped series",\
+        "inconsistent category ordering",\
+        "using grouped bars when a line chart would better show a time trend"\
+      ],\
+      "business_examples": [\
+        "revenue by region and year",\
+        "sales by product and customer type",\
+        "headcount by department and employment type",\
+        "profit by business unit and quarter"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "stacked_bar_chart": \{\
+      "family": "composition",\
+      "definition": "Stacks multiple subcategory values within each bar to show both total magnitude and composition.",\
+      "primary_purpose": [\
+        "part_to_whole",\
+        "category_comparison"\
+      ],\
+      "best_for": [\
+        "showing total values and their components",\
+        "comparing composition across categories",\
+        "showing how subgroups contribute to totals"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "subcategory_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "shows total and composition simultaneously",\
+        "space efficient",\
+        "useful for business mix analysis"\
+      ],\
+      "limitations": [\
+        "middle segments are difficult to compare precisely",\
+        "becomes cluttered with many segments"\
+      ],\
+      "design_rules": [\
+        "keep segment count limited",\
+        "use a consistent stack order",\
+        "place important segments near a common baseline when possible",\
+        "use distinct but restrained colors"\
+      ],\
+      "avoid_when": [\
+        "precise comparison between every subcategory is required",\
+        "there are too many segments",\
+        "the categories do not form meaningful totals"\
+      ],\
+      "common_mistakes": [\
+        "too many stacked segments",\
+        "inconsistent stack order",\
+        "using unrelated categories as a stack",\
+        "using colors that are difficult to distinguish"\
+      ],\
+      "business_examples": [\
+        "revenue by region and product category",\
+        "cost structure by department",\
+        "sales channel mix by quarter",\
+        "customer composition by market"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "100_percent_stacked_bar_chart": \{\
+      "family": "composition",\
+      "definition": "Normalizes each stacked bar to 100 percent so proportional composition can be compared across categories.",\
+      "primary_purpose": [\
+        "part_to_whole",\
+        "proportion_comparison"\
+      ],\
+      "best_for": [\
+        "comparing percentage composition across categories",\
+        "showing shifts in mix over time",\
+        "comparing proportional distributions"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "subcategory_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "makes proportional differences easier to see",\
+        "removes the visual influence of different total sizes",\
+        "useful for mix and share analysis"\
+      ],\
+      "limitations": [\
+        "hides absolute totals",\
+        "middle segments can be difficult to compare precisely"\
+      ],\
+      "design_rules": [\
+        "ensure every bar totals 100 percent",\
+        "use consistent segment ordering",\
+        "label percentages when precision matters",\
+        "show absolute totals separately when they are important"\
+      ],\
+      "avoid_when": [\
+        "absolute values are more important than proportions",\
+        "categories do not represent meaningful wholes",\
+        "there are too many subcategories"\
+      ],\
+      "common_mistakes": [\
+        "failing to communicate that bars are normalized",\
+        "ignoring important differences in total volume",\
+        "using too many segments",\
+        "changing segment ordering across bars"\
+      ],\
+      "business_examples": [\
+        "market share by region",\
+        "customer segment mix by year",\
+        "sales channel mix by product",\
+        "expense composition by department"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "line_chart": \{\
+      "family": "time_series",\
+      "definition": "Connects quantitative values across an ordered sequence, usually time, to emphasize trends and changes.",\
+      "primary_purpose": [\
+        "trend_over_time",\
+        "time_series_comparison"\
+      ],\
+      "best_for": [\
+        "showing trends over time",\
+        "identifying increases and decreases",\
+        "comparing a small number of time-based series",\
+        "identifying turning points"\
+      ],\
+      "data_requirements": \{\
+        "ordered_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "clearly communicates trends",\
+        "supports time-series comparison",\
+        "makes direction and change easy to identify"\
+      ],\
+      "limitations": [\
+        "becomes difficult to read with too many lines",\
+        "not ideal for unrelated categorical comparisons"\
+      ],\
+      "design_rules": [\
+        "keep time in chronological order",\
+        "use appropriate and consistent time intervals",\
+        "limit the number of visible series",\
+        "directly label important lines when possible",\
+        "highlight important series and de-emphasize supporting series"\
+      ],\
+      "avoid_when": [\
+        "the x-axis categories have no meaningful order",\
+        "the primary goal is precise comparison of unrelated categories",\
+        "there are too many overlapping series"\
+      ],\
+      "common_mistakes": [\
+        "connecting unrelated categories",\
+        "using irregular time spacing without making it clear",\
+        "displaying too many lines",\
+        "overusing markers on dense series"\
+      ],\
+      "business_examples": [\
+        "monthly revenue trend",\
+        "weekly website traffic",\
+        "quarterly operating expenses",\
+        "customer growth over time"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "area_chart": \{\
+      "family": "time_series",\
+      "definition": "A time-series visualization in which the area beneath a line is filled to emphasize magnitude or volume over time.",\
+      "primary_purpose": [\
+        "trend_over_time",\
+        "magnitude_over_time"\
+      ],\
+      "best_for": [\
+        "showing the overall magnitude of a trend",\
+        "emphasizing volume-based changes over time",\
+        "showing a small number of time-series categories"\
+      ],\
+      "data_requirements": \{\
+        "ordered_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "emphasizes magnitude",\
+        "visually communicates volume",\
+        "works well for a single dominant series"\
+      ],\
+      "limitations": [\
+        "filled areas can obscure overlapping series",\
+        "precise comparison is harder than with line charts"\
+      ],\
+      "design_rules": [\
+        "use for a small number of series",\
+        "keep the baseline meaningful",\
+        "avoid overlapping opaque areas",\
+        "prefer a line chart when precise trend comparison matters more than magnitude"\
+      ],\
+      "avoid_when": [\
+        "many series overlap",\
+        "precise values are the main focus",\
+        "the baseline has no meaningful interpretation"\
+      ],\
+      "common_mistakes": [\
+        "using many overlapping areas",\
+        "using unnecessary transparency effects",\
+        "using an area chart when a simple line chart would communicate the information more clearly"\
+      ],\
+      "business_examples": [\
+        "total users over time",\
+        "inventory volume over time",\
+        "revenue volume over time",\
+        "energy consumption over time"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_004"\
+        ],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    "scatter_plot": \{\
+      "family": "relationship",\
+      "definition": "Plots observations according to two quantitative variables to reveal relationships, clusters, and unusual observations.",\
+      "primary_purpose": [\
+        "correlation",\
+        "relationship_analysis",\
+        "outlier_detection"\
+      ],\
+      "best_for": [\
+        "examining relationships between two numeric variables",\
+        "identifying clusters",\
+        "finding unusual observations",\
+        "assessing whether two quantitative variables move together"\
+      ],\
+      "data_requirements": \{\
+        "quantitative_variables": 2\
+      \},\
+      "strengths": [\
+        "reveals relationship patterns",\
+        "shows individual observations",\
+        "supports outlier detection"\
+      ],\
+      "limitations": [\
+        "can become crowded with many overlapping points",\
+        "does not establish causation"\
+      ],\
+      "design_rules": [\
+        "label both axes clearly",\
+        "use appropriate quantitative scales",\
+        "reduce marker size or use transparency when points overlap",\
+        "add a trend line only when analytically justified"\
+      ],\
+      "avoid_when": [\
+        "only one quantitative variable exists",\
+        "the primary goal is comparing categorical totals",\
+        "the relationship would be better represented as an ordered time series"\
+      ],\
+      "common_mistakes": [\
+        "implying causation from correlation",\
+        "using inappropriate variables on the axes",\
+        "using oversized markers",\
+        "failing to investigate important outliers"\
+      ],\
+      "business_examples": [\
+        "advertising spend vs revenue",\
+        "discount rate vs profit margin",\
+        "customer acquisition cost vs lifetime value",\
+        "employee engagement vs turnover rate"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "histogram": \{\
+      "family": "distribution",\
+      "definition": "Groups quantitative values into numeric intervals and displays how frequently observations fall within those intervals.",\
+      "primary_purpose": [\
+        "distribution",\
+        "frequency_analysis"\
+      ],\
+      "best_for": [\
+        "understanding the distribution of numeric values",\
+        "identifying skewness",\
+        "finding concentration areas",\
+        "detecting unusual values"\
+      ],\
+      "data_requirements": \{\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "shows distribution shape",\
+        "reveals skew and concentration",\
+        "useful for large numeric datasets"\
+      ],\
+      "limitations": [\
+        "appearance depends on bin selection",\
+        "individual observations are not clearly visible"\
+      ],\
+      "design_rules": [\
+        "choose meaningful bin widths",\
+        "keep bins equal in width unless unequal bins are analytically necessary",\
+        "label the numeric axis with appropriate units",\
+        "evaluate alternative bin sizes when the distribution is unclear"\
+      ],\
+      "avoid_when": [\
+        "the data is categorical",\
+        "there are too few observations",\
+        "individual values need to be compared precisely"\
+      ],\
+      "common_mistakes": [\
+        "using arbitrary bin widths",\
+        "using too many or too few bins",\
+        "adding gaps that make histogram bins appear like independent categories",\
+        "ignoring extreme values that materially distort the displayed range"\
+      ],\
+      "business_examples": [\
+        "distribution of order values",\
+        "customer age distribution",\
+        "delivery time distribution",\
+        "employee salary distribution"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_004"\
+        ],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    "box_plot": \{\
+      "family": "distribution",\
+      "definition": "Summarizes a quantitative distribution using measures such as the median, quartiles, spread, and potential outliers.",\
+      "primary_purpose": [\
+        "distribution",\
+        "group_comparison",\
+        "outlier_detection"\
+      ],\
+      "best_for": [\
+        "comparing distributions across groups",\
+        "identifying potential outliers",\
+        "comparing medians and spread",\
+        "summarizing large groups of observations"\
+      ],\
+      "data_requirements": \{\
+        "quantitative_variables": 1,\
+        "optional_categorical_variables": 1\
+      \},\
+      "strengths": [\
+        "compact distribution summary",\
+        "good for comparing multiple groups",\
+        "highlights potential outliers"\
+      ],\
+      "limitations": [\
+        "may be unfamiliar to some business audiences",\
+        "does not show the complete shape of a distribution"\
+      ],\
+      "design_rules": [\
+        "provide context when the audience may be unfamiliar with quartiles and whiskers",\
+        "keep group ordering logical",\
+        "use the same quantitative scale across groups",\
+        "consider displaying observations when the sample size is small"\
+      ],\
+      "avoid_when": [\
+        "the audience cannot interpret statistical summaries and no explanation can be provided",\
+        "the detailed shape of the distribution is important",\
+        "there are very few observations"\
+      ],\
+      "common_mistakes": [\
+        "failing to explain what the box and whiskers represent",\
+        "comparing groups using inconsistent scales",\
+        "assuming every point beyond the whiskers represents invalid data"\
+      ],\
+      "business_examples": [\
+        "order value distribution by region",\
+        "delivery time by carrier",\
+        "salary distribution by department",\
+        "customer lifetime value by segment"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_004"\
+        ],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    "heatmap": \{\
+      "family": "pattern_detection",\
+      "definition": "Uses color intensity within a matrix or grid to represent quantitative values across two dimensions.",\
+      "primary_purpose": [\
+        "pattern_detection",\
+        "matrix_comparison",\
+        "intensity_analysis"\
+      ],\
+      "best_for": [\
+        "finding patterns across two dimensions",\
+        "identifying high and low concentration areas",\
+        "comparing many values in a compact layout"\
+      ],\
+      "data_requirements": \{\
+        "categorical_or_ordered_variables": 2,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "space efficient",\
+        "reveals patterns quickly",\
+        "works well with larger matrices"\
+      ],\
+      "limitations": [\
+        "color is less precise than position or length",\
+        "poor color scales can distort interpretation",\
+        "exact values may be difficult to determine without labels or interaction"\
+      ],\
+      "design_rules": [\
+        "use an appropriate sequential or diverging color scale",\
+        "include a clear color legend",\
+        "order rows and columns logically",\
+        "ensure meaningful value differences remain visually distinguishable"\
+      ],\
+      "avoid_when": [\
+        "precise numeric comparison is the primary goal",\
+        "there are very few values",\
+        "color differences would be ambiguous or inaccessible"\
+      ],\
+      "common_mistakes": [\
+        "using inappropriate rainbow palettes",\
+        "failing to include a legend",\
+        "using color alone when exact values are required",\
+        "using arbitrary row or column ordering"\
+      ],\
+      "business_examples": [\
+        "sales by weekday and hour",\
+        "product performance by region and category",\
+        "customer activity by month and segment",\
+        "risk level by business unit and metric"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_003",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "waterfall_chart": \{\
+      "family": "change_analysis",\
+      "definition": "Shows how a starting value is affected by a sequence of positive and negative contributions to reach an ending value.",\
+      "primary_purpose": [\
+        "variance_analysis",\
+        "bridge_analysis",\
+        "change_explanation"\
+      ],\
+      "best_for": [\
+        "explaining how components contribute to a net change",\
+        "showing budget-to-actual variance",\
+        "showing financial bridges",\
+        "explaining movement between starting and ending totals"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "clearly explains drivers of change",\
+        "useful for financial reporting",\
+        "shows positive and negative contributions"\
+      ],\
+      "limitations": [\
+        "becomes difficult to read with many steps",\
+        "requires a meaningful starting and ending context"\
+      ],\
+      "design_rules": [\
+        "clearly distinguish increases, decreases, and totals",\
+        "keep categories in a logical sequence",\
+        "label major contributions",\
+        "limit the number of intermediate steps"\
+      ],\
+      "avoid_when": [\
+        "there is no meaningful starting and ending value",\
+        "the purpose is simple category comparison",\
+        "the sequence of components is arbitrary"\
+      ],\
+      "common_mistakes": [\
+        "incorrect cumulative calculations",\
+        "using too many components",\
+        "unclear treatment of totals",\
+        "mixing unrelated drivers"\
+      ],\
+      "business_examples": [\
+        "revenue bridge from prior year to current year",\
+        "budget vs actual variance",\
+        "profit change by driver",\
+        "headcount change from beginning to end of year"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_004"\
+        ],\
+        "type": "derived_guidance"\
+      \}\
+    \},\
+\
+    "kpi_card": \{\
+      "family": "summary",\
+      "definition": "Displays a single important metric, often accompanied by context such as a target, prior period, benchmark, or percentage change.",\
+      "primary_purpose": [\
+        "performance_summary",\
+        "executive_monitoring"\
+      ],\
+      "best_for": [\
+        "showing a critical business metric",\
+        "communicating current performance",\
+        "highlighting performance against a target",\
+        "supporting executive dashboards"\
+      ],\
+      "data_requirements": \{\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "fast to interpret",\
+        "works well for executive audiences",\
+        "space efficient"\
+      ],\
+      "limitations": [\
+        "provides little analytical context by itself",\
+        "can oversimplify complex performance"\
+      ],\
+      "design_rules": [\
+        "show the primary metric prominently",\
+        "include units",\
+        "include relevant comparison context",\
+        "use directional indicators only when their meaning is clear",\
+        "avoid decorative elements that compete with the metric"\
+      ],\
+      "avoid_when": [\
+        "the metric requires distribution or trend context to be meaningful",\
+        "many KPIs are displayed without clear hierarchy",\
+        "the value has no meaningful benchmark or business context"\
+      ],\
+      "common_mistakes": [\
+        "showing too many equally prominent KPI cards",\
+        "using unexplained directional or status indicators",\
+        "omitting units",\
+        "showing percentage change without identifying the comparison period"\
+      ],\
+      "business_examples": [\
+        "monthly revenue",\
+        "gross margin",\
+        "customer churn rate",\
+        "inventory turnover",\
+        "on-time delivery rate"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "table": \{\
+      "family": "detail",\
+      "definition": "Organizes information into rows and columns to support exact lookup, detailed reporting, and precise comparison.",\
+      "primary_purpose": [\
+        "precise_lookup",\
+        "detail_reporting"\
+      ],\
+      "best_for": [\
+        "showing exact values",\
+        "supporting detailed operational reporting",\
+        "allowing users to inspect multiple fields",\
+        "presenting values that must be read precisely"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": "one_or_more",\
+        "quantitative_variables": "zero_or_more"\
+      \},\
+      "strengths": [\
+        "supports exact lookup",\
+        "handles multiple fields",\
+        "familiar to business audiences"\
+      ],\
+      "limitations": [\
+        "patterns can be difficult to detect visually",\
+        "large tables can overwhelm users"\
+      ],\
+      "design_rules": [\
+        "align numeric values consistently",\
+        "use appropriate number formatting",\
+        "limit unnecessary decimal precision",\
+        "use clear column headers",\
+        "sort according to the business question"\
+      ],\
+      "avoid_when": [\
+        "the main purpose is discovering patterns or trends",\
+        "a graphical comparison would communicate the insight more efficiently"\
+      ],\
+      "common_mistakes": [\
+        "displaying too many columns",\
+        "using excessive decimal precision",\
+        "poor numeric alignment",\
+        "using a table when the audience primarily needs a trend or ranking"\
+      ],\
+      "business_examples": [\
+        "transaction detail",\
+        "regional performance report",\
+        "inventory status",\
+        "customer account summary"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "pie_chart": \{\
+      "family": "composition",\
+      "definition": "Divides a circle into slices to represent how categories contribute to a meaningful whole.",\
+      "primary_purpose": [\
+        "part_to_whole"\
+      ],\
+      "best_for": [\
+        "showing a small number of categories that form a meaningful total",\
+        "communicating approximate shares",\
+        "showing a simple composition snapshot"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "familiar to business audiences",\
+        "easy to understand for simple proportions",\
+        "works reasonably well for a small number of clearly different shares"\
+      ],\
+      "limitations": [\
+        "angles and areas are difficult to compare precisely",\
+        "becomes ineffective with many categories"\
+      ],\
+      "design_rules": [\
+        "limit the number of slices",\
+        "ensure values represent parts of a meaningful whole",\
+        "label slices directly when practical",\
+        "use a logical slice order",\
+        "prefer a bar chart when precise comparison matters"\
+      ],\
+      "avoid_when": [\
+        "there are many categories",\
+        "values do not form a meaningful total",\
+        "small differences require precise comparison",\
+        "the primary purpose is showing change over time"\
+      ],\
+      "common_mistakes": [\
+        "using too many slices",\
+        "using 3D effects",\
+        "exploding slices without analytical justification",\
+        "using excessive or arbitrary colors",\
+        "using pie charts for time trends"\
+      ],\
+      "business_examples": [\
+        "revenue share by product category",\
+        "market share by competitor",\
+        "expense share by department",\
+        "customer mix by segment"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "donut_chart": \{\
+      "family": "composition",\
+      "definition": "A variation of a pie chart with a hollow center that represents part-to-whole composition.",\
+      "primary_purpose": [\
+        "part_to_whole"\
+      ],\
+      "best_for": [\
+        "showing a small number of proportional categories",\
+        "displaying a central total or summary alongside composition",\
+        "simple dashboard composition views"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": 1,\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "compact",\
+        "supports a central summary value",\
+        "familiar to many dashboard users"\
+      ],\
+      "limitations": [\
+        "proportional comparison is imprecise",\
+        "many slices reduce readability"\
+      ],\
+      "design_rules": [\
+        "limit the number of slices",\
+        "use the center for a meaningful total or summary when appropriate",\
+        "ensure all slices form a meaningful whole",\
+        "prefer direct labels when space permits"\
+      ],\
+      "avoid_when": [\
+        "precise category comparison is required",\
+        "there are many categories",\
+        "values do not represent parts of a meaningful whole"\
+      ],\
+      "common_mistakes": [\
+        "using the center for decorative information only",\
+        "displaying too many slices",\
+        "using difficult-to-distinguish colors",\
+        "using donut charts for trends over time"\
+      ],\
+      "business_examples": [\
+        "sales mix by channel",\
+        "customer segment share",\
+        "subscription plan mix",\
+        "expense category share"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \},\
+\
+    "treemap": \{\
+      "family": "composition",\
+      "definition": "Uses nested rectangles sized by quantitative values to display hierarchical composition and relative contribution.",\
+      "primary_purpose": [\
+        "hierarchical_composition",\
+        "part_to_whole"\
+      ],\
+      "best_for": [\
+        "showing hierarchical composition",\
+        "displaying many categories in limited space",\
+        "identifying large and small contributors"\
+      ],\
+      "data_requirements": \{\
+        "categorical_variables": "one_or_more",\
+        "quantitative_variables": 1\
+      \},\
+      "strengths": [\
+        "space efficient",\
+        "supports hierarchical data",\
+        "reveals dominant contributors"\
+      ],\
+      "limitations": [\
+        "area is harder to compare precisely than length or position",\
+        "small rectangles may become unreadable"\
+      ],\
+      "design_rules": [\
+        "use rectangle size to represent one clearly defined quantitative measure",\
+        "limit hierarchy depth",\
+        "use color only for meaningful additional information",\
+        "label rectangles only when sufficient space exists"\
+      ],\
+      "avoid_when": [\
+        "precise comparison is required",\
+        "the hierarchy is not meaningful",\
+        "there are only a few simple categories"\
+      ],\
+      "common_mistakes": [\
+        "using too many hierarchy levels",\
+        "encoding unrelated measures with size and color without explanation",\
+        "forcing labels into very small rectangles",\
+        "using a treemap when a bar chart would communicate the comparison more clearly"\
+      ],\
+      "business_examples": [\
+        "revenue by division and product",\
+        "expense breakdown by department and category",\
+        "portfolio allocation by sector and holding",\
+        "sales contribution by region and product"\
+      ],\
+      "provenance": \{\
+        "source_ids": [\
+          "SRC_001",\
+          "SRC_002",\
+          "SRC_004"\
+        ],\
+        "type": "synthesized_guidance"\
+      \}\
+    \}\
+  \}\
+\}}
